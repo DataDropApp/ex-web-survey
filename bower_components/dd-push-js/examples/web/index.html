@@ -1,0 +1,27 @@
+<html>
+<head>
+  
+</head>
+<body>
+
+
+<script src="../../dist/dd-push.js"></script>
+<!-- loads the configuration -->
+<script src="../config.js"></script>
+<script>
+
+  // config = {url : "#### your url here ###", key: "#### your key here ###"}
+  var p1 = dd.push(config);
+
+  p1.write("This is saved from the web")
+    .then(function(body){
+      console.log("The server responded with:", body);
+    })
+    .catch(function(err){
+      console.log("There was an error:", err);
+    });
+
+</script>
+
+</body>
+</html>
